@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Great Commission</title>
+    <style>
+        body {
+            background-color: black;
+            color: red;
+            font-family: 'Garamond', serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2em;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: normal;
+            text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 2px solid white;
+        }
+
+        header h2 {
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid white;
+        }
+
+        h1 a {
+            color: red;
+        }
+
+        @media screen and (max-width: 600px) {
+            h1 {
+                font-size: 1.5em;
+            }
+            p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>The Great Commission</h2>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <h1>
+		<br><br>
+        "Go therefore and <a href="#">disciple</a> all the nations, <a href="#">baptizing</a> them in the name of the Father and of
+        the Son and of the Holy Spirit, teaching them to observe all that I have commanded you. And behold, I am with you always, to the
+        end of the age." 
+		<br>- Matthew 28:19-20
+    </h1>
+</body>
+
+</html>
