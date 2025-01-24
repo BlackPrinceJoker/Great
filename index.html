@@ -3,92 +3,109 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Great Commission</title>
+    <title>Responsive Background Image with Full-Screen Button Image</title>
     <style>
         body {
-            background-color: black;
-            color: red;
-            font-family: 'Garamond', serif;
+            margin: 0;
+            padding: 0;
+            background: url('website.png') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            padding: 20px;
-        }
-
-        h1 {
-            font-size: 2em;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            font-weight: normal;
-            text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-        }
-
-        p {
-            font-size: 1.2em;
-            line-height: 1.6;
+            color: #fff;
+            font-family: Arial, sans-serif;
         }
 
         header {
-            background-color: black;
-            color: white;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            z-index: 1000;
-            border-bottom: 2px solid white;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            border-bottom: 2px solid white; /* White border at the bottom */
+            padding: 10px 0;
+            z-index: 1000; /* Ensure header is on top */
         }
 
-        header h2 {
-            font-size: 1.5em;
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
             margin: 0;
+            display: flex;
         }
 
-        nav a {
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
             color: white;
             text-decoration: none;
-            margin: 0 10px;
-            padding: 5px 10px;
-            border-radius: 5px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border: 1px solid white;
         }
 
-        h1 a {
-            color: red;
+        .button-container {
+            position: absolute;
+            top: 69%;
+            left: 38%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        @media screen and (max-width: 600px) {
-            h1 {
-                font-size: 1.5em;
-            }
-            p {
-                font-size: 1em;
-            }
+        button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            width: 500px; /* Custom width */
+            height: auto; /* Maintain aspect ratio */
+            transform: scale(1, 1); /* Initial scaling along X and Y axes */
+            transition: transform 0.3s, opacity 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.1, 1.1); /* Scale on hover along X and Y axes */
+            opacity: 0.9; /* Adjust the opacity value as needed */
+        }
+
+        button img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     </style>
 </head>
 
 <body>
     <header>
-        <h2>The Great Commission</h2>
         <nav>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
         </nav>
     </header>
-    <h1>
-		<br><br>
-        "Go therefore and <a href="#">disciple</a> all the nations, <a href="#">baptizing</a> them in the name of the Father and of
-        the Son and of the Holy Spirit, teaching them to observe all that I have commanded you. And behold, I am with you always, to the
-        end of the age." 
-		<br>- Matthew 28:19-20
-    </h1>
+
+    <div>
+        <div class="button-container">
+            <button>
+                <img src="button_image.png" alt="Button Image">
+            </button>
+        </div>
+    </div>
 </body>
 
 </html>
