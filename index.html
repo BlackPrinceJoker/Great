@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Just Gov</title>
-<link rel="icon" type="image/x-icon" href="icon.ico">
+<link rel="icon" type="image/x-icon" href="icon.png">
   
   <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -23,7 +23,10 @@
 		background: url('Background.png') no-repeat center center;
 		background-size: 600px;
 		background-attachment: fixed;
-		background-position: center 0px; /* Adjust to move the image up */
+		background-position: center 0px; /* Adjust to move the image up */		
+        background-color: #d2b48c; /* Header background color */
+	}
+	.center{
 		color: white;
 		padding: 20px 0;
 		text-align: center;
@@ -32,9 +35,7 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-        background-color: #d2b48c; /* Header background color */
 	}
-
 
     h1 {
         font-family: 'MedievalSharp', cursive;
@@ -77,15 +78,44 @@
         color: #555; /* Dark gray text color on hover */
         border-radius: 20px; /* Rounded corners on hover */
     }
+	.navbar-nav {
+		border-left-style: solid;
+		border-bottom-style: solid;
+		border-width: 3px;
+		border-color: #4d3319;
+		font-size: 1.25em;
+		color: #4d3319;
+		
+	}
 </style>
 </head>
 <body>
     <header>
-		<h1>Just Goverment Principles</h1>
-		<div class="btn-group main-bar" role="group" aria-label="Image buttons">
-            <a href="basics.html" class="btn btn-transparent btn-custom"><img src="BiblicalGovernment.png" alt="Button 1"></a>
-            <a href="support.html" type="button" class="btn btn-transparent btn-custom"><img src="SupportTheWork.png" alt="Button 2"></a>
-        </div>
+		<nav class="navbar navbar-expand-sm">
+			<div class="container-fluid">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="https://justgovfl.com/">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="https://justgovfl.com/basics">Basics</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="https://justgovfl.com/support">Contribute</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="https://justgovfl.com/index2">Just Government Principles</a>
+					</li>
+				</ul>
+		  </div>
+		</nav>
+		<div class="center">
+			<h1>The Just Government Project</h1>
+			<div class="btn-group main-bar" role="group" aria-label="Image buttons">
+				<a href="basics.html" class="btn btn-transparent btn-custom"><img src="BiblicalGovernment.png" alt="Button 1"></a>
+				<a href="support.html" type="button" class="btn btn-transparent btn-custom"><img src="SupportTheWork.png" alt="Button 2"></a>
+			</div>
+		</div>
     </header>
     <div class="content">
 		<h2> Of Civil Authorites </h2>
