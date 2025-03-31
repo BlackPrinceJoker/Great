@@ -12,91 +12,117 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap">
 
 <style>
-    body {
-        background-color: #f6f0e4; /* Parchment background color */
-        margin: 0;
-        padding: 0;
-        text-align: center;
-    }
+        body {
+            background-color: #f6f0e4; /* Parchment background color */			
+            margin: 0px;
+            line-height: 1.6;
+            padding: 0px;
+            text-align: center;
+        }
 
-    header {
-		background: url('Background.png') no-repeat center center;
-		background-size: 600px;
-		background-attachment: fixed;
-		background-position: center 0px; /* Adjust to move the image up */		
-        background-color: #d2b48c; /* Header background color */
-	}
-	.center{
-		color: white;
-		padding: 20px 0;
-		text-align: center;
-		height: 250px; /* Adjust height as needed */
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
+        header {
+			background: url('Background.png') no-repeat center center;
+			background-size: 600px;
+			background-attachment: fixed;
+			background-position: center 0px; /* Adjust to move the image up */		
+			background-color: #d2b48c; /* Header background color */
+		}
+		.center{
+			color: white;
+			padding: 20px 0;
+			text-align: center;
+			height: 250px; /* Adjust height as needed */
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
 
-    h1 {
-        font-family: 'MedievalSharp', cursive;
-        color: #4d3319; /* Heading color */
-		font-size: 4em;
-    }
-	
-	h2 {
-        color: #4d3319; /* Heading color */
-		font-size: 2em;
-		text-align: center;
-    }
+        h1 {
+			font-weight: 700;
+            color: #4d3319; /* Heading color */
+            font-size: 3em;
+        }
 
-    .content {
-        max-width: 800px;
-        margin: 20px auto;
-        padding: 20px;
-        background-color: #fff; /* Content background color */
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        text-align: left; /* Left-align text */
-    }
+        h2 {
+            color: #4d3319; /* Heading color */
+            font-size: 2.25em;
+            text-align: center;
+        }
 
-    p,ul {
-		font-size: 1.25em;
-        color: #4d3319; /* Text color */
-        line-height: 1.6; /* Increase line height for better readability */
-        margin-bottom: 15px; /* Add margin between paragraphs */
-		text-indent: 45px;
-    }
-	img {
-		width: 100%;
-	}
-	.main-bar {
-		max-width: 900px;
-		margin-top: 25px;
-	}
-	.btn-custom:hover {
-        background-color: rgba(169, 169, 169, 0.6); /* Transparent gray background on hover */
-        color: #555; /* Dark gray text color on hover */
-        border-radius: 20px; /* Rounded corners on hover */
-    }
-	.navbar-nav {
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 35px;
+            background-color: #fff; /* Content background color */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left; /* Left-align text */
+        }
+
+        p {
+            font-size: 1.5em;
+            color: #4d3319; /* Text color */
+            line-height: 1.6; /* Increase line height for better readability */
+            margin-bottom: 15px; /* Add margin between paragraphs */
+            text-indent: 45px;
+			max-width: 800px; /* Set the maximum width as needed */
+            text-align: left;
+        }
+		
+		h3 {
+			color: #4d3319; /* Heading color */
+            font-size: 1.75em;
+            text-align: left;
+            margin-top: 10px;			
+            padding-top: 40px;
+            border-top: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+		
+		h4 {
+			color: #4d3319; /* Heading color */
+            font-size: 1.3em;
+            text-align: left;
+            margin-top: 10px;			
+            padding-top: 40px;
+            border-top: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+		.subtext {
+			color: #4d3319;
+			font-size: 1.5em;
+			font-weight: 700;
+		}
+
+        blockquote {
+			font-weight: 600;
+			font-size: 1.2em;
+			margin: 15px auto;
+			padding: 15px;
+			background: #E6CDAA;
+			color: #333;
+			border-radius: 10px;
+			max-width: 750px;
+			text-align: left;
+			line-height: 1.6; /* Increase line height for better readability */
+		}
+		
+		a {
+			color: inherit;
+			text-decoration: none; /* Optional: Remove underline from links */
+		}
+		a:hover {
+			color: #111; /* Dark gray text color on hover */
+		}
+    .navbar-nav {
 		border-left-style: solid;
 		border-bottom-style: solid;
 		border-width: 3px;
 		border-color: #4d3319;
 		font-size: 1.25em;
-		color: #4d3319;		
-	}
-	blockquote {
-		font-weight: 600;
-		font-size: 1.15em;
-		margin: 15px auto;
-		padding: 15px;
-		background: #E6CDAA;
-		color: #333;
-		border-radius: 10px;
-		max-width: 600px;
-		text-align: left;
-        line-height: 1.6; /* Increase line height for better readability */
+		color: #4d3319;
+		
 	}
 </style>
 </head>
@@ -104,39 +130,28 @@
     <header>
 		<nav class="navbar navbar-expand-sm">
 			<div class="container-fluid">
-				<!-- Add the toggler button -->
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				
-				<!-- Add the collapsible div -->
-				<div class="collapse navbar-collapse" id="navbarNav">
-					<ul class="navbar-nav">
-						<li class="nav-item">
-							<a class="nav-link" href="https://justgovfl.com/">Home</a>
-						</li>
-						<li class="nav-item">
-							<li class="nav-item">
-							<a class="nav-link" href="https://justgovfl.com/basics">Basics</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="https://justgovfl.com/support">Contribute</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="https://justgovfl.com/principles">Just Government Principles</a>
-						</li>
-					</ul>
-				</div>
-			</div>
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="https://justgovfl.com/">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="https://justgovfl.com/basics">Basics</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="https://justgovfl.com/support">Contribute</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="https://justgovfl.com/principles">Just Government Principles</a>
+					</li>
+				</ul>
+		  </div>
 		</nav>
+		
 		<div class="center">
-			<h1>The Just Government Project</h1>
-			<div class="btn-group main-bar" role="group" aria-label="Image buttons">
-				<a href="basics.html" class="btn btn-transparent btn-custom"><img src="BiblicalGovernment.png" alt="Button 1"></a>
-				<a href="support.html" type="button" class="btn btn-transparent btn-custom"><img src="SupportTheWork.png" alt="Button 2"></a>
-			</div>
-		</div>
-    </header>
+		<h1>The Just Government Project</h1>
+		<div class="subtext">We exist to teach the principles of biblical government and empower Christians to reform politics.</div>
+		<div>
+	</header>
     <div class="content">
 		<br>
 		<h2>
