@@ -23,15 +23,19 @@
         header {
 			background: url('Background.png') no-repeat center center;
 			background-size: 600px;
-			background-attachment: fixed;
-			background-position: center 0px; /* Adjust to move the image up */		
+			background-attachment: fixed;	
 			background-color: #d2b48c; /* Header background color */
+            background-position: center 10px;
+            flex: 1; /* Make the header grow to fill the available space */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
 		}
 		.center{
 			color: white;
 			padding: 20px 0;
 			text-align: center;
-			height: 250px; /* Adjust height as needed */
+			min-height: 250px; /* Adjust height as needed */
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -115,42 +119,50 @@
 		a:hover {
 			color: #111; /* Dark gray text color on hover */
 		}
-    .navbar-nav {
-		border-left-style: solid;
-		border-bottom-style: solid;
-		border-width: 3px;
-		border-color: #4d3319;
-		font-size: 1.25em;
-		color: #4d3319;
-		
-	}
+		.navbar-nav {
+			border-left-style: solid;
+			border-bottom-style: solid;
+			border-width: 3px;
+			border-color: #4d3319;
+			font-size: 1.25em;
+			color: #4d3319;
+			font-weight: 600;
+		}
 </style>
 </head>
 <body>
     <header>
 		<nav class="navbar navbar-expand-sm">
 			<div class="container-fluid">
-				<ul class="navbar-nav">
-					<li class="nav-item">
-						<a class="nav-link" href="https://justgovfl.com/">Home</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="https://justgovfl.com/basics">Basics</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="https://justgovfl.com/support">Contribute</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="https://justgovfl.com/principles">Just Government Principles</a>
-					</li>
-				</ul>
-		  </div>
+				<!-- Toggler Button for Mobile -->
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<!-- Collapsible Navbar Content -->
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="https://justgovfl.com/">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="https://justgovfl.com/basics">Basics</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="https://justgovfl.com/support">Contribute</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="https://justgovfl.com/principles">Just Government Principles</a>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</nav>
-		
+
 		<div class="center">
-		<h1>The Just Government Project</h1>
-		<div class="subtext">We exist to teach the principles of biblical government and empower Christians to reform politics.</div>
-		<div>
+			<h1>The Just Government Project</h1>
+			<div class="subtext">We exist to teach the principles of biblical government and empower Christians to reform politics.</div>
+		</div>
 	</header>
 	<div class="content">
 
@@ -181,7 +193,9 @@
 	</div>
 
 	
-    <script>        
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+	
 		var refTagger = {
 			settings: {
 				bibleVersion: "ESV",
