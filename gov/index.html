@@ -6,120 +6,202 @@
 <title>Just Gov</title>
 <link rel="icon" type="image/x-icon" href="icon.png">
   
-<!-- Bootstrap CSS -->
+  <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap">
 
 <style>
-    body {
-        background-color: #f6f0e4;			
-        margin: 0px;
-        line-height: 1.6;
-        padding: 0px;
-        text-align: center;
-    }
+        body {
+            background-color: #f6f0e4; /* Parchment background color */			
+            margin: 0px;
+            line-height: 1.6;
+            padding: 0px;
+            text-align: center;
+        }
 
-    header {
-        background: url('Background.png') no-repeat center center;
-        background-size: 600px;
-        background-attachment: fixed;	
-        background-color: #d2b48c;
-        background-position: center 10px;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+        header {
+			background: url('Background.png') no-repeat center center;
+			background-size: 600px;
+			background-attachment: fixed;	
+			background-color: #d2b48c; /* Header background color */
+            background-position: center 10px;
+            flex: 1; /* Make the header grow to fill the available space */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+		}
+		.center{
+			color: white;
+			padding: 20px 0;
+			text-align: center;
+			min-height: 250px; /* Adjust height as needed */
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
 
-    .center{
-        color: white;
-        padding: 20px 0;
-        text-align: center;
-        min-height: 250px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+        h1 {
+			font-weight: 700;
+            color: #4d3319; /* Heading color */
+            font-size: 3em;
+        }
 
-    h1 { font-weight: 700; color: #4d3319; font-size: 3em; }
-    h2 { color: #4d3319; font-size: 2.25em; text-align: center; }
-    h3 { color: #4d3319; font-size: 1.75em; text-align: left; margin-top: 10px; padding-top: 40px; border-top: 1px solid #ccc; padding-bottom: 5px; }
-    p { font-size: 1.5em; color: #4d3319; line-height: 1.6; margin-bottom: 15px; text-indent: 45px; max-width: 800px; text-align: left; }
-    .subtext { color: #4d3319; font-size: 1.5em; font-weight: 700; }
-    blockquote { font-weight: 600; font-size: 1.2em; margin: 15px auto; padding: 15px; background: #E6CDAA; color: #333; border-radius: 10px; max-width: 750px; text-align: left; line-height: 1.6; }
-    a { color: inherit; text-decoration: none; }
-    a:hover { color: #111; }
-    .ref { font-size: 0.75em; }
+        h2 {
+            color: #4d3319; /* Heading color */
+            font-size: 2.25em;
+            text-align: center;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 35px;
+            background-color: #fff; /* Content background color */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left; /* Left-align text */
+        }
+
+        p {
+            font-size: 1.5em;
+            color: #4d3319; /* Text color */
+            line-height: 1.6; /* Increase line height for better readability */
+            margin-bottom: 15px; /* Add margin between paragraphs */
+            text-indent: 45px;
+			max-width: 800px; /* Set the maximum width as needed */
+            text-align: left;
+        }
+		
+		h3 {
+			color: #4d3319; /* Heading color */
+            font-size: 1.75em;
+            text-align: left;
+            margin-top: 10px;			
+            padding-top: 40px;
+            border-top: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+		
+		h4 {
+			color: #4d3319; /* Heading color */
+            font-size: 1.3em;
+            text-align: left;
+            margin-top: 10px;			
+            padding-top: 40px;
+            border-top: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+		.subtext {
+			color: #4d3319;
+			font-size: 1.5em;
+			font-weight: 700;
+		}
+
+        blockquote {
+			font-weight: 600;
+			font-size: 1.2em;
+			margin: 15px auto;
+			padding: 15px;
+			background: #E6CDAA;
+			color: #333;
+			border-radius: 10px;
+			max-width: 750px;
+			text-align: left;
+			line-height: 1.6; /* Increase line height for better readability */
+		}
+		
+		a {
+			color: inherit;
+			text-decoration: none; /* Optional: Remove underline from links */
+		}
+		a:hover {
+			color: #111; /* Dark gray text color on hover */
+		}
+		.navbar-nav {
+			border-left-style: solid;
+			border-bottom-style: solid;
+			border-width: 3px;
+			border-color: #4d3319;
+			font-size: 1.25em;
+			color: #4d3319;
+			font-weight: 600;
+		}
+		.ref{
+            font-size: 0.75em;
+		}
 </style>
 </head>
 <body>
+    <header>
+		<nav class="navbar navbar-expand-sm">
+			<div class="container-fluid">
+				<!-- Toggler Button for Mobile -->
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
 
-<header>
-    <nav class="navbar navbar-expand-sm">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+				<!-- Collapsible Navbar Content -->
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="https://justgovfl.com/">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="https://justgovfl.com/basics">Basics</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="https://justgovfl.com/support">Contribute</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="https://justgovfl.com/principles">Just Government Principles</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="https://justgovfl.com/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://justgovfl.com/basics">Basics</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://justgovfl.com/support">Contribute</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://justgovfl.com/principles">Just Government Principles</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <div class="center">
-        <h1>Just Government Principles</h1>
-        <div class="subtext">You are the salt of the earth. &#8209;&nbsp;Matthew&nbsp;5:13</div>
+		<div class="center">
+			<h1>Just Government Principles</h1>
+			<div class="subtext">You are the salt of the earth. &#8209;&nbsp;Matthew&nbsp;5:13</div>
+		</div>
+	</header>
+    <div class="content">
+		
     </div>
-</header>
-
-<div class="content">
-    <h3>Abominations, Civil Authority, and Appeasing God’s Wrath</h3>
-
-    <blockquote>
-        “It does not bear the sword for nothing; for it is a minister of God, an avenger who brings wrath on the one who practices evil.”  
-        <div class="ref">Ro 13:4</div>
-    </blockquote>
-
-    <p>In this context, I’m using “abominations” to designate sins of individuals that bring God’s judgement upon their surrounding community.</p>
-
-    <p>When an abomination is committed, it is the government’s duty to take action that appeases God’s wrath against the community.</p>
-
-    <blockquote>
-        “I will require your lifeblood.”  
-        <div class="ref">Ge 9:5</div>
-    </blockquote>
-
-    <blockquote>
-        “No expiation can be made for the land for the blood that is shed on it, except by the blood of him who shed it.”  
-        <div class="ref">Nu 35:33</div>
-    </blockquote>
-
-    <blockquote>
-        “You shall not pity him, but you shall purge the blood of the innocent from Israel.”  
-        <div class="ref">De 19:13</div>
-    </blockquote>
-
-    <blockquote>
-        “And the bloodguiltiness shall be forgiven them.”  
-        <div class="ref">De 21:8</div>
-    </blockquote>
-
-    <blockquote>
-        “So you shall purge the evil from Israel.”  
-        <div class="ref">De 22:22</div>
-    </blockquote>
-
-    <p>In the New Covenant, what sins are abominations, and what actions appease God’s wrath?</p>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>        
+		var refTagger = {
+			settings: {
+				bibleVersion: "ESV",
+				dropShadow: false,			
+				roundCorners: true,
+				socialSharing: [],
+				customStyle : {
+					heading: {
+						backgroundColor : "#DC7F40",
+						color : "#FFFFFF",
+						fontFamily : "Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif"
+					},
+					body   : {
+						fontFamily : "Palatino, 'Palatino Linotype', 'Palatino LT STD', 'Book Antiqua', Georgia, serif",
+						moreLink : {
+							color: "#BBBBBB"
+						}
+					}
+				}
+			}
+		};
+		(function(d, t) {
+			var n=d.querySelector('[nonce]');
+			refTagger.settings.nonce = n && (n.nonce||n.getAttribute('nonce'));
+			var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+			g.src = 'https://api.reftagger.com/v2/RefTagger.js';
+			g.nonce = refTagger.settings.nonce;
+			s.parentNode.insertBefore(g, s);
+		}(document, 'script'));
+		
+    </script>
 </body>
 </html>
